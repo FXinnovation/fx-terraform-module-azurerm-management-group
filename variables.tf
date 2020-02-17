@@ -24,16 +24,21 @@ variable "subscription_ids" {
 ###
 # Management Groups
 ###
+variable "management_group_enabled" {
+  description = "Boolean flag which describes whether or not to enabled the Mangement groups."
+  default     = false
+}
+
 variable "display_names" {
   description = "List of friendly names for this Management Group. If not specified, this'll be the same as the `group_id`. "
   type        = list(string)
   default     = []
 }
 
-variable "managemnet_group_subscription_ids" {
+variable "management_group_subscription_ids" {
   description = "List of subscription GUIDs which should be assigned to the Management Group."
-  type        = list(string)
-  default     = []
+  type        = list(list(string))
+  default     = [[]]
 }
 
 variable "parent_management_group_ids" {

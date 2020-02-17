@@ -1,6 +1,6 @@
 ## Disabled example
 
-This should create any resource related to management groups.
+This should not create any resource related to management groups.
 
 ## Usage
 ```
