@@ -21,7 +21,7 @@ module "level_2" {
 }
 
 module "level_3" {
-  source = "source"
+  source = "../.."
 
   enabled                           = true
   management_group_enabled          = true
